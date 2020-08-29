@@ -18,8 +18,8 @@ LOADED_LANGS_ID = []
 LANGS_TEXT = {}
 FUNC_LANG = {}
 
-for x in os.listdir('/data/HarukaAya/locales'):
-	if os.path.isdir('/data/HarukaAya/locales/'+x):
+for x in os.listdir('/data/HarukaAya/haruka/modules/langs'):
+	if os.path.isdir('/data/HarukaAya/modules/langs/'+x):
 		continue
 	x = x.replace('.yml', '')
 	LOADED_LANGS_ID.append(x)
