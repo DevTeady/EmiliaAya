@@ -21,7 +21,7 @@ FUNC_LANG = {}
 for x in os.listdir('/data/HarukaAya/haruka/modules/langs'):
 	if os.path.isdir('/data/HarukaAya/modules/langs/'+x):
 		continue
-	x = x.replace('.yml', '')
+	x = x.replace('.py', '')
 	LOADED_LANGS_ID.append(x)
 	imported_langs = importlib.import_module("haruka.modules.locales." + x)
 	FUNC_LANG[x] = imported_langs
