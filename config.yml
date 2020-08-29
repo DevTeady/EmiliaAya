@@ -1,0 +1,22 @@
+bot_token: "1129345938:AAH68injdP-lWWV-aXeArzuhaqZxR0lq_8s"
+api_key: '1635673'
+api_hash: '7909509215e9ca038f0fa9a89cfac1e1'
+owner_id: 123456
+owner_username: "DarkSoda01"
+message_dump: "-1001341348228"
+gban_dump: "-1001387683535"
+load: []
+no_load: []
+strict_antispam: True
+workers: 4
+deepfry_token: None
+del_cmds: False
+sw_api: 'W8j9V744RBXOsBE4bw6adi0awvdzCeKcT881q9NKeXNHFFY1VkdFajMX6d9llJMe'
+
+# Database
+database_url: "postgres://wukxotdsvfvzbh:2dbd33a8ba084d45aa3ce2122fd00cfcb3eab2603c6959c77bcac468832ea3b4@ec2-34-236-215-156.compute-1.amazonaws.com:5432/der86eer8ejkjo"
+
+# Permission
+sudo_users: [1181415944]
+support_users: [1181415944]
+whitelist_users: [1181415944]
