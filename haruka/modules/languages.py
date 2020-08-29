@@ -7,23 +7,23 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, User
 from telegram import Message, Chat, Update, Bot
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async, DispatcherHandlerStop, MessageHandler, Filters, CallbackQueryHandler
-from haruka import dispatcher, spamcheck, LOGGER
-from haruka.modules.disable import DisableAbleCommandHandler
-from haruka.modules.helper_funcs.chat_status import user_admin_no_reply, user_admin
+from emilia import dispatcher, spamcheck, LOGGER
+from emilia.modules.disable import DisableAbleCommandHandler
+from emilia.modules.helper_funcs.chat_status import user_admin_no_reply, user_admin
 
-from haruka.modules.sql import languages_sql as sql
-from haruka.modules.helper_funcs.alternate import send_message
+from emilia.modules.sql import languages_sql as sql
+from emilia.modules.helper_funcs.alternate import send_message
 
 LOADED_LANGS_ID = []
 LANGS_TEXT = {}
 FUNC_LANG = {}
 
 for x in os.listdir('/data/HarukaAya/haruka/modules/langs'):
-	if os.path.isdir('/data/HarukaAya/modules/langs/'+x):
+	if os.path.isdir('/data/HarukaAya/haruka/modules/langs'+x):
 		continue
 	x = x.replace('.py', '')
 	LOADED_LANGS_ID.append(x)
-    imported_langs = importlib.import_module("haruka.modules.langs." + x)
+	imported_langs = importlib.import_module("emilia.modules.langs." + x)
 	FUNC_LANG[x] = imported_langs
 	LANGS_TEXT[x] = imported_langs.__lang__
 
@@ -110,7 +110,7 @@ def set_language(update, context):
 		if counter == len(LOADED_LANGS_ID):
 			loaded_langs.append(tmp_list)
 
-	loaded_langs.append([InlineKeyboardButton("Translate", url="https://github.com/AyraHikari/harukaHikari/blob/master/TRANSLATION.md")])
+	loaded_langs.append([InlineKeyboardButton("Translate", url="https://github.com/AyraHikari/EmiliaHikari/blob/master/TRANSLATION.md")])
 
 	keyboard = InlineKeyboardMarkup(loaded_langs)
 
