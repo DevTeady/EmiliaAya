@@ -23,6 +23,7 @@ for x in os.listdir('/data/HarukaAya/haruka/modules/langs'):
 		continue
 	x = x.replace('.py', '')
 	LOADED_LANGS_ID.append(x)
+        imported_langs = importlib.import_module("haruka.modules.locales." + x)
 	FUNC_LANG[x] = imported_langs
 	LANGS_TEXT[x] = imported_langs.__lang__
 
